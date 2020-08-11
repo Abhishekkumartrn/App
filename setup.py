@@ -60,7 +60,7 @@ def register():
 @app.route("/adregister",methods=['GET','POST'])
 def adregister():
     form = AdminRegistrationForm()
-     if form.validate_on_submit():
+    if form.validate_on_submit():
         flash(f'Account created for {form.username.data}!', 'success')
         return redirect(url_for('home'))
    
